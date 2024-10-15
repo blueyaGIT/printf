@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:33:01 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/15 10:45:48 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/15 11:01:06 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
 // Helper function to initialize the t_flags structure.
 void	init_flags(t_flags *flags)

@@ -6,11 +6,11 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:35:38 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/15 10:36:42 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/15 11:01:06 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
 int	print_number(int num, t_flags *flags)
 {
