@@ -6,7 +6,9 @@ CFLAGS = -Wall -Wextra -Werror
 # List of source files (all in the parent directory 't1')
 SRCS =	srcs/ft_printf.c \
 		srcs/ft_putchar.c \
-		srcs/ft_putstr.c 
+		srcs/ft_putstr.c \
+		srcs/ft_parseflags.c \
+		srcs/ft_print_number.c 
 # Object files
 OBJS = $(SRCS:.c=.o)
 OBJS_B = $(BSRCS:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/15 10:24:40 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/15 10:47:10 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
+	t_flags	flags;
 	int		printed_chars;
 
 	printed_chars = 0;
@@ -23,16 +24,14 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%' && *(format + 1))
 		{
-			format++;
-			if (*format == 'c')
-				printed_chars += ft_putchar(va_arg(args, int));
-			else if (*format == 's')
-				printed_chars += ft_putstr(va_arg(args, char *));
+			format = parse_flags(format + 1, &flags);
+			format = parse_width(format, &flags, args);
+			format = parse_precision(format, &flags, args);
+			if (*format == 'd')
+				printed_chars += print_number(va_arg(args, int), &flags);
 		}
 		else
-		{
-			printed_chars += ft_putchar(*format);
-		}
+			printed_chars += write(1, format, 1);
 		format++;
 	}
 	va_end(args);
