@@ -6,11 +6,15 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/15 12:43:34 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/15 12:58:43 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+
+/*
+	implement stair-functions to cehck every possible *format type
+*/
 
 int	ft_printf(const char *format, ...)
 {
