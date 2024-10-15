@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/15 11:01:06 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/15 12:43:34 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ int	ft_printf(const char *format, ...)
 			format = parse_precision(format, &flags, args);
 			if (*format == 'd')
 				printed_chars += print_number(va_arg(args, int), &flags);
+			else if (*format == 'c')
+				printed_chars += write(1,
+						&(char){(unsigned char)va_arg(args, int)}, 1);
 		}
 		else
 			printed_chars += write(1, format, 1);

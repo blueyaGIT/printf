@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:03:41 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/15 10:48:26 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/15 12:39:52 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
@@ -78,4 +78,4 @@ const char	*parse_width(const char *format, t_flags *flags, va_list args);
 const char	*parse_precision(const char *format, t_flags *flags, va_list args);
 const char	*parse_format(const char *format, t_flags *flags, va_list args);
 
-#endif /* LIBFTPRINTF_H */
+#endif /* FT_PRINTF_H */
