@@ -8,7 +8,9 @@ SRCS =	srcs/ft_printf.c \
 		srcs/ft_putchar.c \
 		srcs/ft_putstr.c \
 		srcs/ft_parseflags.c \
-		srcs/ft_print_number.c 
+		srcs/ft_print_number.c \
+		srcs/ft_print_string.c \
+		srcs/ft_print_pointer.c 
 # Object files
 OBJS = $(SRCS:.c=.o)
 OBJS_B = $(BSRCS:.c=.o)
