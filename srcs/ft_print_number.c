@@ -5,36 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 11:20:08 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/17 11:20:21 by dalbano          ###   ########.fr       */
+/*   Created: 2024/10/17 12:43:43 by dalbano           #+#    #+#             */
+/*   Updated: 2024/10/17 13:14:45 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-void	ft_print_number(int n, int *printed_chars)
+int	ft_print_number(int num, t_flags *flags)
 {
-	char	buffer[12];
-	int		i;
-	int		is_negative;
+	char	buffer[50];
+	int		len;
 
-	i = 11;
-	is_negative = 0;
-	buffer[i--] = '\0';
-	if (n < 0)
-	{
-		is_negative = 1;
-		n = -n;
-	}
-	if (n == 0)
-		buffer[i--] = '0';
-	while (n > 0)
-	{
-		buffer[i--] = '0' + (n % 10);
-		n /= 10;
-	}
-	if (is_negative)
-		buffer[i--] = '-';
+	len = 0;
+	if (flags->has_precision)
+		sprintf(buffer, "%.*d", flags->precision, num);
+	else if (flags->zero_pad && !flags->left_align)
+		sprintf(buffer, "%0*d", flags->field_width, num);
+	else
+		sprintf(buffer, "%d", num);
+	len = write(1, buffer, strlen(buffer));
+	return (len);
+}
 
-	*printed_chars += write(1, &buffer[i + 1], 11 - i);
+int	ft_print_number_unsigned(unsigned int num, t_flags *flags)
+{
+	char	buffer[50];
+	int		len;
+
+	if (flags->has_precision)
+		sprintf(buffer, "%.*u", flags->precision, num);
+	else if (flags->zero_pad && !flags->left_align)
+		sprintf(buffer, "%0*u", flags->field_width, num);
+	else if (flags->left_align)
+		sprintf(buffer, "%-*u", flags->field_width, num);
+	else
+		sprintf(buffer, "%u", num);
+	len = write(1, buffer, strlen(buffer));
+	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/17 11:20:09 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/17 13:16:36 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@
 	%s - done
 	%p - done
 	%d - done
-	%i - 
-	%u - 
+	%i - done
+	%u - done
 	%x - 
 	%X - 
 	%% - 
 	%mix - 
 */
 
-static void	manual_switch(const char *format, int *printed_chars, va_list args)
+static void	manual_switch(const char *format,
+	int *printed_chars, va_list args, t_flags *flags)
 {
 	if (*format == 'c')
 		*printed_chars += write(1,
@@ -39,12 +40,16 @@ static void	manual_switch(const char *format, int *printed_chars, va_list args)
 	else if (*format == 's')
 		ft_print_string(va_arg(args, char *), printed_chars);
 	else if (*format == 'i' || *format == 'd')
-		ft_print_number(va_arg(args, int), printed_chars);
+		*printed_chars += ft_print_number(va_arg(args, int), flags);
+	else if (*format == 'u')
+		*printed_chars += ft_print_number_unsigned(va_arg(args,
+					unsigned int), flags);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
+	t_flags	flags;
 	int		printed_chars;
 
 	printed_chars = 0;
@@ -53,8 +58,10 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%' && *(format + 1))
 		{
-			format++;
-			manual_switch(format, &printed_chars, args);
+			format = parse_flags(format + 1, &flags);
+			format = parse_width(format, &flags, args);
+			format = parse_precision(format, &flags, args);
+			manual_switch(format, &printed_chars, args, &flags);
 		}
 		else
 			printed_chars += write(1, format, 1);

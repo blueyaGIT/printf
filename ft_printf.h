@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:03:41 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/17 11:20:41 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/17 13:09:18 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,10 @@ typedef struct s_format {
 int			ft_printf(const char *format, ...);
 int			ft_putchar(char c);
 int			ft_putstr(char *str);
+int			ft_print_number(int num, t_flags *flags);
+int			ft_print_number_unsigned(unsigned int num, t_flags *flags);
 
 void		init_flags(t_flags *flags);
-void		ft_print_number(int n, int *printed_chars);
 void		ft_print_string(const char *str, int *printed_chars);
 void		ft_print_pointer(uintptr_t ptr, int *printed_chars);
 
