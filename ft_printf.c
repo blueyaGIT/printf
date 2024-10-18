@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/18 18:53:20 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/18 19:06:10 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 /*
 	implement stair-functions to check every possible *format type
-	%c - 
-	%s - 
-	%p - 
-	%d - 
-	%i - 
-	%u - 
-	%x - 
-	%X - 
-	%% - 
-	%mix - 
+	%c - done
+	%s - done
+	%p - done
+	%d - done
+	%i - done
+	%u - done
+	%x - done
+	%X - done
+	%% - done
+	%mix - done
 */
 
 static void	manual_switch(const char *format,
