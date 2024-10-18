@@ -16,13 +16,13 @@ SRCS = 	ft_parseflags.c \
 		ft_strlen.c \
 		ft_utoa.c 
 
-BSRCS = ft_parseflags_bonus.c \
-		ft_atoi_flags_bonus.c \
-		ft_itoa_buffer_bonus.c 
+# BSRCS = ft_parseflags_bonus.c \
+# 		ft_atoi_flags_bonus.c \
+# 		ft_itoa_buffer_bonus.c 
 
 # Object files
 OBJS = $(SRCS:.c=.o)
-OBJS_B = $(BSRCS:.c=.o)
+# OBJS_B = $(BSRCS:.c=.o)
 
 # Rule to compile the main library
 $(NAME): $(OBJS)
@@ -30,9 +30,9 @@ $(NAME): $(OBJS)
 	@echo "Library $(NAME) created."
 
 # Rule to compile the bonus files only when requested
-bonus: $(OBJS) $(OBJS_B)
-	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
-	@echo "Bonus library $(NAME) created."
+# bonus: $(OBJS) $(OBJS_B)
+# 	@ar rcs $(NAME) $(OBJS) $(OBJS_B)
+# 	@echo "Bonus library $(NAME) created."
 
 # Rule for compiling .c files into .o files
 %.o: %.c
