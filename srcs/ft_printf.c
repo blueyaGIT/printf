@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/18 15:00:38 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/18 15:13:12 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 	%x - done
 	%X - done
 	%% - done
-	%mix - done
+	%mix - 
 */
 
 static void	manual_switch(const char *format,

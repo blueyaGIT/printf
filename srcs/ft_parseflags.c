@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:33:01 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/15 11:01:06 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/18 15:14:32 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,27 +96,3 @@ const char	*parse_precision(const char *format, t_flags *flags, va_list args)
 	}
 	return (format);
 }
-
-const char	*parse_format(const char *format, t_flags *flags, va_list args)
-{
-	format = parse_flags(format, flags);
-	format = parse_width(format, flags, args);
-	format = parse_precision(format, flags, args);
-	return (format);
-}
-
-/*
-	Explanation
-	parse_width():
-		Handles both numeric widths and * width arguments from va_list.
-		Manages negative widths by converting them into left-aligned fields.
-
-	parse_precision():
-		Deals with the precision indicated by '.' and manages both numeric 
-		precision and * precision arguments from va_list.
-		Ignores negative precision by disabling the has_precision flag.
-		
-	parse_format():
-		This is the central function that orchestrates the parsing of flags, 
-		width, and precision.
-*/

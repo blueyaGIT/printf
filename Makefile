@@ -15,7 +15,9 @@ SRCS =	srcs/ft_itoa_buffer.c \
 		srcs/ft_putnbr.c \
 		srcs/ft_putstr.c \
 		srcs/ft_strlen.c \
-		srcs/ft_utoa.c 
+		srcs/ft_utoa.c \
+		srcs/ft_atoi_flags.c \
+		srcs/ft_parseflags_bonus.c 
 # Object files
 OBJS = $(SRCS:.c=.o)
 OBJS_B = $(BSRCS:.c=.o)
