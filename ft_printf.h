@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:03:41 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/17 14:34:32 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/18 14:58:30 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,13 +73,17 @@ int			ft_print_number(int num, t_flags *flags);
 int			ft_print_number_unsigned(unsigned int num, t_flags *flags);
 int			ft_print_hex(unsigned int num, int uppercase, t_flags *flags);
 
-void		init_flags(t_flags *flags);
 void		ft_print_string(const char *str, int *printed_chars);
 void		ft_print_pointer(uintptr_t ptr, int *printed_chars);
+void		ft_itoa_buffer(int num, char *buffer, int precision);
+void		ft_utoa(unsigned int num, char *buffer, int precision);
+void		ft_putnbr(int num);
 
 const char	*parse_flags(const char *format, t_flags *flags);
 const char	*parse_width(const char *format, t_flags *flags, va_list args);
 const char	*parse_precision(const char *format, t_flags *flags, va_list args);
 const char	*parse_format(const char *format, t_flags *flags, va_list args);
+
+size_t		ft_strlen(const char *str);
 
 #endif /* FT_PRINTF_H */
