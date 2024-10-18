@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:03:41 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/17 13:09:18 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/17 14:34:32 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int			ft_putchar(char c);
 int			ft_putstr(char *str);
 int			ft_print_number(int num, t_flags *flags);
 int			ft_print_number_unsigned(unsigned int num, t_flags *flags);
+int			ft_print_hex(unsigned int num, int uppercase, t_flags *flags);
 
 void		init_flags(t_flags *flags);
 void		ft_print_string(const char *str, int *printed_chars);

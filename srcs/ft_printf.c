@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/18 13:50:47 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/18 13:52:12 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ static void	manual_switch(const char *format,
 	else if (*format == 'u')
 		*printed_chars += ft_print_number_unsigned(va_arg(args,
 					unsigned int), flags);
+	else if (*format == 'x')
+		*printed_chars += ft_print_hex(va_arg(args, unsigned int), 0, flags);
 }
 
 int	ft_printf(const char *format, ...)
