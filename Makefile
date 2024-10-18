@@ -4,20 +4,22 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # List of source files (all in the parent directory 't1')
-SRCS =	srcs/ft_itoa_buffer.c \
-		srcs/ft_parseflags.c \
-		srcs/ft_print_hex.c \
-		srcs/ft_print_number.c \
-		srcs/ft_print_pointer.c \
-		srcs/ft_print_string.c \
-		srcs/ft_printf.c \
-		srcs/ft_putchar.c \
-		srcs/ft_putnbr.c \
-		srcs/ft_putstr.c \
-		srcs/ft_strlen.c \
-		srcs/ft_utoa.c \
-		srcs/ft_atoi_flags.c \
-		srcs/ft_parseflags_bonus.c 
+SRCS = 	ft_parseflags.c \
+		ft_print_hex.c \
+		ft_print_number.c \
+		ft_print_pointer.c \
+		ft_print_string.c \
+		ft_printf.c \
+		ft_putchar.c \
+		ft_putnbr.c \
+		ft_putstr.c \
+		ft_strlen.c \
+		ft_utoa.c 
+
+BSRCS = ft_parseflags_bonus.c \
+		ft_atoi_flags_bonus.c \
+		ft_itoa_buffer_bonus.c 
+
 # Object files
 OBJS = $(SRCS:.c=.o)
 OBJS_B = $(BSRCS:.c=.o)

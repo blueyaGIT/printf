@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:03:41 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/18 15:23:53 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/18 18:58:29 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int			ft_atoi_flags(const char **str);
 void		ft_print_string(const char *str, int *printed_chars);
 void		ft_print_pointer(uintptr_t ptr, int *printed_chars);
 void		ft_itoa_buffer(int num, char *buffer, int precision);
-void		ft_utoa(unsigned int num, char *buffer, int precision);
+void		ft_utoa(unsigned int num, char *buffer);
 void		ft_putnbr(int num);
 void		parse_flags_bonus(const char **format, t_flags *flags);
 
