@@ -6,7 +6,7 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:03:41 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/18 18:58:29 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/10/20 09:08:27 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <stddef.h>  // For size_t
 # include <stdbool.h> // For boolean values
 # include <ctype.h>
-# include <stdio.h>
 
 /*
 Enumeration for the different format specifiers.
