@@ -6,12 +6,15 @@
 /*   By: dalbano <dalbano@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:59:21 by dalbano           #+#    #+#             */
-/*   Updated: 2024/10/18 19:06:10 by dalbano          ###   ########.fr       */
+/*   Updated: 2024/11/08 21:30:00 by dalbano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * TODO: fix strict and add to libft
+ */
 /*
 	implement stair-functions to check every possible *format type
 	%c - done
