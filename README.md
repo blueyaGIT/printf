@@ -51,8 +51,7 @@ int main(void)
 
 - `ft_printf.c` - Contains the `ft_printf()` function implementation.
 - `ft_printf.h` - Header file with function prototypes and necessary includes.
-- `ft_printf_utils.c` - Utility functions used by `ft_printf()`.
-- `main.c` - Example program to test `ft_printf()`.
+- `ft_*.c` - Utility functions used by `ft_printf()`.
 
 ## Function Description
 
