@@ -1,4 +1,12 @@
-<a href="https://github.com/blueyaGIT/printf"><img src="https://github.com/blueyaGIT/blueyaGIT/blob/b34a5a4e10b9019609659eaa0541a4325db88ca5/covers/cover-ft_printf.png"></a>
+<p align="center">
+  <img src="https://github.com/blueyaGIT/blueyaGIT/blob/master/42_badges/ft_printfn.png?raw=true" alt="printf"/>
+</p>
+
+<p align="center">
+  Score: <i>102/100</i><br>
+  Finished: <i>20.10.2024</i><br>
+</p>
+
 ###
 
 `ft_printf` is a custom implementation of the standard `printf` function in C. It allows formatted output with various format specifiers and handles multiple data types. This project is part of the 42 School curriculum.
