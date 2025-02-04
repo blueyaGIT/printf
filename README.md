@@ -76,3 +76,11 @@ Formats and prints data to the standard output based on format specifiers.
 - Memory allocation is not required unless additional dynamic operations are introduced.
 
 For more details, refer to the project documentation or the `42` subject PDF.
+
+## 🚀 Next Project
+
+<a href="https://github.com/blueyaGIT/get_next_line"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=BF94E4&width=435&lines=get_next_line"></a>
+
+## ⏳ Previous Project
+
+<a href="https://github.com/blueyaGIT/libft"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=BF94E4&width=435&lines=libft"></a>
